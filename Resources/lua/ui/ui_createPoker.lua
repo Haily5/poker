@@ -7,6 +7,7 @@ require "ui_createPoker_obj"
 local all_node
 local priority
 
+
 local function buttonClicked( index )
 	if all_node["poker" .. index ]:getChildByTag(10) then all_node["poker" .. index ]:removeChildByTag(10, true) end
 		local function ChangePoker(value)
@@ -29,7 +30,9 @@ local button_clicked_list = {
 		local name = string.format("玩家%02d", #pokerData.usersInfo + 1)
 		local pokers = {}
 		local jetton = 0
-		local sb = 1
+		local sbStr = cloneNamesArray[1]
+		local sb = namesIndex[sbStr]
+		table.remove(cloneNamesArray, 1)
 		local user = {
 			["name"] = name,
 			["pokers"] = pokers,
@@ -203,16 +206,22 @@ local function onCellCreated( state, pSender )
 		--sb文字 SBlabel
 		local SBlabel = childen.SBlabel
 		SBlabel = tolua.cast(SBlabel, "CCLabelTTF")
+		dump(user, "user")
 		SBlabel:setString(namesArray[user.sb])
 		--sb bb转换按钮 exchangeButton
 		local exchangeButton = childen.exchangeButton
 		
 		local function listCallback(cellIndex)
-			user.sb = cellIndex
-			SBlabel:setString(namesArray[cellIndex])
+			local sbStr = cloneNamesArray[cellIndex]
+			print(sbStr, "sbStr", cellIndex)
+			user.sb = namesIndex[sbStr]
+			table.remove(cloneNamesArray, cellIndex)
+			SBlabel:setString(namesArray[user.sb])
 		end
 		local function exchangeButtonClicked()
-			G_UI_Manger.G_Func_showUI("listLayer", namesArray, exchangeButton:getPosition(), listCallback)
+			local sbStr = namesArray[user.sb]
+			table.insert(cloneNamesArray, sbStr)
+			G_UI_Manger.G_Func_showUI("listLayer", cloneNamesArray, exchangeButton:getPosition(), listCallback)
 		end
 		exchangeButton = tolua.cast(exchangeButton, "CCControlButton")
 		exchangeButton:setTouchPriority(priority)
@@ -245,7 +254,6 @@ local function on_init(_layer, _data1, _data2, _data3, _priority, _childen)
 	all_node.scrollListLayer:setCellSize(CCSizeMake(576, 150))
 	all_node.scrollListLayer:setColCount(1)
 	all_node.scrollListLayer:registerCellCreateScriptHandler(onCellCreated)
-	dump(pokerData, "pokerData")
 	all_node.scrollListLayer:initWithCellCount(#pokerData.usersInfo)
 
 end

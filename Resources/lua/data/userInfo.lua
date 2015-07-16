@@ -221,15 +221,15 @@ function UserInfo:getMyPokerList()
 end
 
 --总共9个玩家
-namesArray = {"SB", "BB", "UTG", "UTG+1", "MP1", "MP2", "HJ", "CO", "D"}
+namesArray = {"SB", "BB", "UTG", "UTG+1", "UTG+2", "MP1", "MP2", "CO", "D"}
 namesIndex = {
 	["SB"] = 1, 
 	["BB"] = 2, 
 	["UTG"] = 3, 
 	["UTG+1"] = 4, 
-	["MP1"] = 5, 
-	["MP2"] = 6, 
-	["HJ"] = 7, 
+	["UTG+2"] = 5, 
+	["MP1"] = 6, 
+	["MP2"] = 7, 
 	["CO"] = 8, 
 	["D"] = 9,
 }

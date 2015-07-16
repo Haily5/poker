@@ -68,7 +68,6 @@ local function onCellCreated( state, pSender )
 			local function deleteButtonClicked()
 				print("删除牌谱:", index)
 				UserInfo:deletePoker( index )
-				table.remove(data, index)
 				all_node.scroList:initWithCellCount(#data)
 			end
 			local delButton = childen.delButton

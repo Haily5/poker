@@ -206,7 +206,7 @@ local function onCellCreated( state, pSender )
 		--sb文字 SBlabel
 		local SBlabel = childen.SBlabel
 		SBlabel = tolua.cast(SBlabel, "CCLabelTTF")
-		dump(user, "user")
+		-- dump(user, "user")
 		SBlabel:setString(namesArray[user.sb])
 		--sb bb转换按钮 exchangeButton
 		local exchangeButton = childen.exchangeButton
@@ -221,6 +221,9 @@ local function onCellCreated( state, pSender )
 		local function exchangeButtonClicked()
 			local sbStr = namesArray[user.sb]
 			table.insert(cloneNamesArray, sbStr)
+			table.sort( cloneNamesArray, function ( index1, index2 )
+				return namesIndex[index1] < namesIndex[index2]
+			end )
 			G_UI_Manger.G_Func_showUI("listLayer", cloneNamesArray, exchangeButton:getPosition(), listCallback)
 		end
 		exchangeButton = tolua.cast(exchangeButton, "CCControlButton")

@@ -12,10 +12,10 @@ local stepname = nil
 local stepArray = {}
 local actionArray = {}
 
+local jettonLabelArray = {}
+
 local cloneUserInfo = {}
 
-local costLabel
-local costNode
 local bPoint
 
 local poolValue
@@ -92,8 +92,7 @@ local function updateNextAction()
 		all_node.PoolValue:setString(poolValue)
 		label:setString(formatChouma(cloneJetton))
 
-		costNode:setPosition(getPoint(stepInfo.index, 40))
-		costLabel:setString(formatChouma(jetton))
+		jettonLabelArray[stepInfo.index]:setString(formatChouma(jetton))
 
 		actionStep = actionStep + 1
 	else
@@ -139,8 +138,8 @@ local function updateBackAction()
 		all_node.PoolValue:setString(poolValue)
 		label:setString(formatChouma(cloneJetton))
 
-		costNode:setPosition(getPoint(stepInfo.index, 40))
-		costLabel:setString(formatChouma(jetton))
+		jettonLabelArray[stepInfo.index]:setString(formatChouma(jetton))
+
 	else
 		stepname = actionName[stepname].back
 		if stepname then
@@ -150,8 +149,6 @@ local function updateBackAction()
 		else
 			actionStep = 1
 			stepname = "scroPerFlop"
-			costNode:setPosition(getPoint(1, 40))
-			costLabel:setString("0")
 			print("牌局第一步")
 			for __, l in pairs(actionArray) do
 				tolua.cast(l, "CCLabelTTF")
@@ -191,12 +188,19 @@ local function on_init(_layer, _data, startPoint, callback, _priority, _childen)
 	stepArray = {}
 	cloneUserInfo = {}
 	actionArray = {}
+
+	local dIndex = nil
+
 	local usersInfo = clone(data.usersInfo)
 
 	for ___,	info in pairs(usersInfo) do
 		local jetton = info.jetton
 		local index = info.sb
-		cloneUserInfo[index] = tonumber(jetton)
+		if index == namesIndex["D"] then dIndex = true end
+
+
+
+		
 		local pokers = info.pokers
 
 		local pokerValue1 = pokers[1]
@@ -215,7 +219,35 @@ local function on_init(_layer, _data, startPoint, callback, _priority, _childen)
 			poker2:setPosition(ccp (40, 0))
 		end
 
+		local costNode = CCSprite:create("Resources/playIcon.png");
+		all_node.decstopLayer:addChild(costNode, 3)
+		costNode:setPosition(getPoint(index, 20))
+
+		local costLabel = CCLabelTTF:create("0", "verdana", 18)
+		costNode:addChild(costLabel)
+		costLabel:setAnchorPoint(ccp (0, 0))
+		costLabel:setPosition(ccp (30, 0))
+
+		jettonLabelArray[index] = costLabel
+
 		local jetton = info.jetton
+		if index == namesIndex["BB"] then
+
+			costLabel:setString(formatChouma(data.pokerInfo.level))
+			poolValue = poolValue + data.pokerInfo.level
+			jetton = jetton - data.pokerInfo.level
+
+		end
+
+		if index == namesIndex["SB"] then
+			costLabel:setString(formatChouma(data.pokerInfo.level / 2))
+			poolValue = poolValue + data.pokerInfo.level / 2
+			jetton = jetton - data.pokerInfo.level / 2
+			
+		end
+
+		cloneUserInfo[index] = tonumber(jetton)
+
 		jetton = formatChouma(jetton)
 
 		local label = CCLabelTTF:create(jetton, "verdana", 18)
@@ -229,9 +261,11 @@ local function on_init(_layer, _data, startPoint, callback, _priority, _childen)
 		actionName:setAnchorPoint(ccp (0.5, 0))
 		actionName:setPosition( ccp (50, 115))
 		actionArray[index] = actionName
-		
+
 	end
 
+	all_node.PoolValue:setString(poolValue)
+	
 	dump(cloneUserInfo, "cloneUserInfo")
 
 	local publicPoker = data.publicPoker
@@ -259,25 +293,17 @@ local function on_init(_layer, _data, startPoint, callback, _priority, _childen)
 	stepname = "scroPerFlop"
 
 	--确定庄家位置
-	local steps = data["steps"]
-	local group = steps[stepname]
+	if dIndex then
+		local zhuangjia = 9
 
-	local zhuangjia = 1
+		local shaizi = CCSprite:create("Resources/shaizi.png")
+		all_node.decstopLayer:addChild(shaizi, 3)
+		local p = getPoint(zhuangjia, 10)
+		p.x = p.x - 50
+		shaizi:setPosition(p)
+	end
 
-	local shaizi = CCSprite:create("Resources/shaizi.png")
-	all_node.decstopLayer:addChild(shaizi, 3)
-	local p = getPoint(zhuangjia, 10)
-	p.x = p.x - 50
-	shaizi:setPosition(p)
-
-	costNode = CCSprite:create("Resources/playIcon.png");
-	all_node.decstopLayer:addChild(costNode, 3)
-	costNode:setPosition(getPoint(zhuangjia, 40))
-
-	costLabel = CCLabelTTF:create("0", "verdana", 18)
-	costNode:addChild(costLabel)
-	costLabel:setAnchorPoint(ccp (0, 0))
-	costLabel:setPosition(ccp (30, 0))
+	
 
 
 end

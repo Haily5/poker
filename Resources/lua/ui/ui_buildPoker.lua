@@ -50,6 +50,7 @@ local sbArray = {}
 local function getNoPassPlayer(group, index)
 
 	local sbIndex
+	dump(sbArray, "sbArray")
 	for i,v in ipairs(sbArray) do
 		if v == index then
 			sbIndex = i
@@ -98,8 +99,8 @@ local function scroPerFlop_onCellCreated( state, pSender )
 					--大盲操作
 					stepInfo["index"] = 3
 					stepInfo["action"] = "call"
-					stepInfo["jetton"] = pokerData.pokerInfo.level
-					costValue = pokerData.pokerInfo.level
+					stepInfo["jetton"] = 0
+					costValue = 0
 				else
 					--其他操作
 					local lastStepInfo = pokerData.steps.scroPerFlop[#pokerData.steps.scroPerFlop]

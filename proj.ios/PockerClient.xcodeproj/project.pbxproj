@@ -183,18 +183,8 @@
 		1AB87029175E0A40005D39BF /* CCSkeleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AB87025175E0A40005D39BF /* CCSkeleton.cpp */; };
 		1AB8702A175E0A40005D39BF /* CCSkeletonAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AB87027175E0A40005D39BF /* CCSkeletonAnimation.cpp */; };
 		1AB87031175E0A5B005D39BF /* libwebsockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB87030175E0A5B005D39BF /* libwebsockets.a */; };
-		1AC3622F16D47C5C000847F2 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622316D47C5C000847F2 /* background.mp3 */; };
-		1AC3623016D47C5C000847F2 /* background.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622416D47C5C000847F2 /* background.ogg */; };
-		1AC3623116D47C5C000847F2 /* crop.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622516D47C5C000847F2 /* crop.png */; };
-		1AC3623216D47C5C000847F2 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622616D47C5C000847F2 /* dog.png */; };
-		1AC3623316D47C5C000847F2 /* effect1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622716D47C5C000847F2 /* effect1.wav */; };
-		1AC3623416D47C5C000847F2 /* farm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622816D47C5C000847F2 /* farm.jpg */; };
 		1AC3623516D47C5C000847F2 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622916D47C5C000847F2 /* fonts */; };
 		1AC3623616D47C5C000847F2 /* hello.lua in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622A16D47C5C000847F2 /* hello.lua */; };
-		1AC3623716D47C5C000847F2 /* hello2.lua in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622B16D47C5C000847F2 /* hello2.lua */; };
-		1AC3623816D47C5C000847F2 /* land.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622C16D47C5C000847F2 /* land.png */; };
-		1AC3623916D47C5C000847F2 /* menu1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622D16D47C5C000847F2 /* menu1.png */; };
-		1AC3623A16D47C5C000847F2 /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AC3622E16D47C5C000847F2 /* menu2.png */; };
 		2964941F19518E9A00BE20D8 /* CCActionTimeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2964941419518E9A00BE20D8 /* CCActionTimeline.cpp */; };
 		2964942019518E9A00BE20D8 /* CCActionTimelineCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2964941619518E9A00BE20D8 /* CCActionTimelineCache.cpp */; };
 		2964942119518E9A00BE20D8 /* CCFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2964941819518E9A00BE20D8 /* CCFrame.cpp */; };
@@ -234,6 +224,25 @@
 		46C1009316BF786A00F74D54 /* tolua_fix.c in Sources */ = {isa = PBXBuildFile; fileRef = 46C1008A16BF786A00F74D54 /* tolua_fix.c */; };
 		46C59AD317641FF300F43DC3 /* AudioEngine.lua in Resources */ = {isa = PBXBuildFile; fileRef = 46C59AD117641FF300F43DC3 /* AudioEngine.lua */; };
 		46C59AD417641FF300F43DC3 /* CCBReaderLoad.lua in Resources */ = {isa = PBXBuildFile; fileRef = 46C59AD217641FF300F43DC3 /* CCBReaderLoad.lua */; };
+		85D1D5F51B57EF6900EBC318 /* cocostudio in Resources */ = {isa = PBXBuildFile; fileRef = 85D1D5F21B57EF6900EBC318 /* cocostudio */; };
+		85D1D5F61B57EF6900EBC318 /* lua in Resources */ = {isa = PBXBuildFile; fileRef = 85D1D5F31B57EF6900EBC318 /* lua */; };
+		85D1D5F71B57EF6900EBC318 /* poker in Resources */ = {isa = PBXBuildFile; fileRef = 85D1D5F41B57EF6900EBC318 /* poker */; };
+		85D1D5FF1B57EF7B00EBC318 /* AudioEngine.lua in Resources */ = {isa = PBXBuildFile; fileRef = 85D1D5F81B57EF7B00EBC318 /* AudioEngine.lua */; };
+		85D1D6001B57EF7B00EBC318 /* CCBReaderLoad.lua in Resources */ = {isa = PBXBuildFile; fileRef = 85D1D5F91B57EF7B00EBC318 /* CCBReaderLoad.lua */; };
+		85D1D6011B57EF7B00EBC318 /* Cocos2d.lua in Resources */ = {isa = PBXBuildFile; fileRef = 85D1D5FA1B57EF7B00EBC318 /* Cocos2d.lua */; };
+		85D1D6021B57EF7B00EBC318 /* CocoStudio.lua in Resources */ = {isa = PBXBuildFile; fileRef = 85D1D5FB1B57EF7B00EBC318 /* CocoStudio.lua */; };
+		85D1D6031B57EF7B00EBC318 /* extern.lua in Resources */ = {isa = PBXBuildFile; fileRef = 85D1D5FC1B57EF7B00EBC318 /* extern.lua */; };
+		85D1D6041B57EF7B00EBC318 /* functions.lua in Resources */ = {isa = PBXBuildFile; fileRef = 85D1D5FD1B57EF7B00EBC318 /* functions.lua */; };
+		85D1D6051B57EF7B00EBC318 /* json.lua in Resources */ = {isa = PBXBuildFile; fileRef = 85D1D5FE1B57EF7B00EBC318 /* json.lua */; };
+		85D1D6141B57F00500EBC318 /* CCTouchLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D6061B57F00500EBC318 /* CCTouchLayer.cpp */; };
+		85D1D6151B57F00500EBC318 /* fpconv.c in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D6091B57F00500EBC318 /* fpconv.c */; };
+		85D1D6161B57F00500EBC318 /* lua_cjson.c in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D60B1B57F00500EBC318 /* lua_cjson.c */; };
+		85D1D6171B57F00500EBC318 /* lua_extensions.c in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D60D1B57F00500EBC318 /* lua_extensions.c */; };
+		85D1D6181B57F00500EBC318 /* strbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D60F1B57F00500EBC318 /* strbuf.c */; };
+		85D1D6191B57F00500EBC318 /* struct.c in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D6111B57F00500EBC318 /* struct.c */; };
+		85D1D61A1B57F00500EBC318 /* lua_helperClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D6121B57F00500EBC318 /* lua_helperClass.cpp */; };
+		85D1D61D1B57F01B00EBC318 /* CCControlCheckBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D61B1B57F01B00EBC318 /* CCControlCheckBox.cpp */; };
+		85D1D6201B57F02600EBC318 /* CCMultiColumnTableView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D61E1B57F02600EBC318 /* CCMultiColumnTableView.cpp */; };
 		ED35C0C718323498002A0750 /* CCArmatureAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED35C03818323497002A0750 /* CCArmatureAnimation.cpp */; };
 		ED35C0C818323498002A0750 /* CCProcessBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED35C03A18323497002A0750 /* CCProcessBase.cpp */; };
 		ED35C0C918323498002A0750 /* CCTween.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED35C03C18323497002A0750 /* CCTween.cpp */; };
@@ -675,18 +684,8 @@
 		1AB87028175E0A40005D39BF /* CCSkeletonAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSkeletonAnimation.h; sourceTree = "<group>"; };
 		1AB8702E175E0A5B005D39BF /* libwebsockets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libwebsockets.h; sourceTree = "<group>"; };
 		1AB87030175E0A5B005D39BF /* libwebsockets.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwebsockets.a; sourceTree = "<group>"; };
-		1AC3622316D47C5C000847F2 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = background.mp3; path = ../Resources/background.mp3; sourceTree = "<group>"; };
-		1AC3622416D47C5C000847F2 /* background.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; name = background.ogg; path = ../Resources/background.ogg; sourceTree = "<group>"; };
-		1AC3622516D47C5C000847F2 /* crop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = crop.png; path = ../Resources/crop.png; sourceTree = "<group>"; };
-		1AC3622616D47C5C000847F2 /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dog.png; path = ../Resources/dog.png; sourceTree = "<group>"; };
-		1AC3622716D47C5C000847F2 /* effect1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = effect1.wav; path = ../Resources/effect1.wav; sourceTree = "<group>"; };
-		1AC3622816D47C5C000847F2 /* farm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = farm.jpg; path = ../Resources/farm.jpg; sourceTree = "<group>"; };
 		1AC3622916D47C5C000847F2 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = ../Resources/fonts; sourceTree = "<group>"; };
 		1AC3622A16D47C5C000847F2 /* hello.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hello.lua; path = ../Resources/hello.lua; sourceTree = "<group>"; };
-		1AC3622B16D47C5C000847F2 /* hello2.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hello2.lua; path = ../Resources/hello2.lua; sourceTree = "<group>"; };
-		1AC3622C16D47C5C000847F2 /* land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = land.png; path = ../Resources/land.png; sourceTree = "<group>"; };
-		1AC3622D16D47C5C000847F2 /* menu1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu1.png; path = ../Resources/menu1.png; sourceTree = "<group>"; };
-		1AC3622E16D47C5C000847F2 /* menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu2.png; path = ../Resources/menu2.png; sourceTree = "<group>"; };
 		2964941419518E9A00BE20D8 /* CCActionTimeline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionTimeline.cpp; sourceTree = "<group>"; };
 		2964941519518E9A00BE20D8 /* CCActionTimeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionTimeline.h; sourceTree = "<group>"; };
 		2964941619518E9A00BE20D8 /* CCActionTimelineCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCActionTimelineCache.cpp; sourceTree = "<group>"; };
@@ -767,6 +766,33 @@
 		46C1008B16BF786A00F74D54 /* tolua_fix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tolua_fix.h; sourceTree = "<group>"; };
 		46C59AD117641FF300F43DC3 /* AudioEngine.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AudioEngine.lua; sourceTree = "<group>"; };
 		46C59AD217641FF300F43DC3 /* CCBReaderLoad.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CCBReaderLoad.lua; sourceTree = "<group>"; };
+		85D1D5F21B57EF6900EBC318 /* cocostudio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cocostudio; sourceTree = "<group>"; };
+		85D1D5F31B57EF6900EBC318 /* lua */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lua; sourceTree = "<group>"; };
+		85D1D5F41B57EF6900EBC318 /* poker */ = {isa = PBXFileReference; lastKnownFileType = folder; path = poker; sourceTree = "<group>"; };
+		85D1D5F81B57EF7B00EBC318 /* AudioEngine.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AudioEngine.lua; sourceTree = "<group>"; };
+		85D1D5F91B57EF7B00EBC318 /* CCBReaderLoad.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CCBReaderLoad.lua; sourceTree = "<group>"; };
+		85D1D5FA1B57EF7B00EBC318 /* Cocos2d.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cocos2d.lua; sourceTree = "<group>"; };
+		85D1D5FB1B57EF7B00EBC318 /* CocoStudio.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CocoStudio.lua; sourceTree = "<group>"; };
+		85D1D5FC1B57EF7B00EBC318 /* extern.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = extern.lua; sourceTree = "<group>"; };
+		85D1D5FD1B57EF7B00EBC318 /* functions.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = functions.lua; sourceTree = "<group>"; };
+		85D1D5FE1B57EF7B00EBC318 /* json.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.lua; sourceTree = "<group>"; };
+		85D1D6061B57F00500EBC318 /* CCTouchLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CCTouchLayer.cpp; path = ../Classes/CCTouchLayer.cpp; sourceTree = "<group>"; };
+		85D1D6071B57F00500EBC318 /* CCTouchLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTouchLayer.h; path = ../Classes/CCTouchLayer.h; sourceTree = "<group>"; };
+		85D1D6091B57F00500EBC318 /* fpconv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fpconv.c; sourceTree = "<group>"; };
+		85D1D60A1B57F00500EBC318 /* fpconv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fpconv.h; sourceTree = "<group>"; };
+		85D1D60B1B57F00500EBC318 /* lua_cjson.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lua_cjson.c; sourceTree = "<group>"; };
+		85D1D60C1B57F00500EBC318 /* lua_cjson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_cjson.h; sourceTree = "<group>"; };
+		85D1D60D1B57F00500EBC318 /* lua_extensions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lua_extensions.c; sourceTree = "<group>"; };
+		85D1D60E1B57F00500EBC318 /* lua_extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_extensions.h; sourceTree = "<group>"; };
+		85D1D60F1B57F00500EBC318 /* strbuf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strbuf.c; sourceTree = "<group>"; };
+		85D1D6101B57F00500EBC318 /* strbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strbuf.h; sourceTree = "<group>"; };
+		85D1D6111B57F00500EBC318 /* struct.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = struct.c; sourceTree = "<group>"; };
+		85D1D6121B57F00500EBC318 /* lua_helperClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lua_helperClass.cpp; path = ../Classes/lua_helperClass.cpp; sourceTree = "<group>"; };
+		85D1D6131B57F00500EBC318 /* lua_helperClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lua_helperClass.h; path = ../Classes/lua_helperClass.h; sourceTree = "<group>"; };
+		85D1D61B1B57F01B00EBC318 /* CCControlCheckBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCControlCheckBox.cpp; sourceTree = "<group>"; };
+		85D1D61C1B57F01B00EBC318 /* CCControlCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControlCheckBox.h; sourceTree = "<group>"; };
+		85D1D61E1B57F02600EBC318 /* CCMultiColumnTableView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCMultiColumnTableView.cpp; sourceTree = "<group>"; };
+		85D1D61F1B57F02600EBC318 /* CCMultiColumnTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMultiColumnTableView.h; sourceTree = "<group>"; };
 		ED35C03818323497002A0750 /* CCArmatureAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCArmatureAnimation.cpp; sourceTree = "<group>"; };
 		ED35C03918323497002A0750 /* CCArmatureAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCArmatureAnimation.h; sourceTree = "<group>"; };
 		ED35C03A18323497002A0750 /* CCProcessBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCProcessBase.cpp; sourceTree = "<group>"; };
@@ -1023,6 +1049,8 @@
 		15C153B31683112E00D239F2 /* CCControlExtension */ = {
 			isa = PBXGroup;
 			children = (
+				85D1D61B1B57F01B00EBC318 /* CCControlCheckBox.cpp */,
+				85D1D61C1B57F01B00EBC318 /* CCControlCheckBox.h */,
 				15C153B41683112E00D239F2 /* CCControl.cpp */,
 				15C153B51683112E00D239F2 /* CCControl.h */,
 				15C153B61683112E00D239F2 /* CCControlButton.cpp */,
@@ -1067,6 +1095,8 @@
 		15C153D71683112E00D239F2 /* CCScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				85D1D61E1B57F02600EBC318 /* CCMultiColumnTableView.cpp */,
+				85D1D61F1B57F02600EBC318 /* CCMultiColumnTableView.h */,
 				15C153D81683112E00D239F2 /* CCScrollView.cpp */,
 				15C153D91683112E00D239F2 /* CCScrollView.h */,
 				15C153DA1683112E00D239F2 /* CCSorting.cpp */,
@@ -1818,6 +1848,23 @@
 			path = script;
 			sourceTree = "<group>";
 		};
+		85D1D6081B57F00500EBC318 /* cjson */ = {
+			isa = PBXGroup;
+			children = (
+				85D1D6091B57F00500EBC318 /* fpconv.c */,
+				85D1D60A1B57F00500EBC318 /* fpconv.h */,
+				85D1D60B1B57F00500EBC318 /* lua_cjson.c */,
+				85D1D60C1B57F00500EBC318 /* lua_cjson.h */,
+				85D1D60D1B57F00500EBC318 /* lua_extensions.c */,
+				85D1D60E1B57F00500EBC318 /* lua_extensions.h */,
+				85D1D60F1B57F00500EBC318 /* strbuf.c */,
+				85D1D6101B57F00500EBC318 /* strbuf.h */,
+				85D1D6111B57F00500EBC318 /* struct.c */,
+			);
+			name = cjson;
+			path = ../Classes/cjson;
+			sourceTree = "<group>";
+		};
 		ED35C02A18323496002A0750 /* CocoStudio */ = {
 			isa = PBXGroup;
 			children = (
@@ -2102,6 +2149,11 @@
 		F293BB7C15EB830F00256477 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				85D1D6061B57F00500EBC318 /* CCTouchLayer.cpp */,
+				85D1D6071B57F00500EBC318 /* CCTouchLayer.h */,
+				85D1D6081B57F00500EBC318 /* cjson */,
+				85D1D6121B57F00500EBC318 /* lua_helperClass.cpp */,
+				85D1D6131B57F00500EBC318 /* lua_helperClass.h */,
 				F293BB7E15EB831F00256477 /* AppDelegate.cpp */,
 				F293BB7F15EB831F00256477 /* AppDelegate.h */,
 			);
@@ -2111,18 +2163,18 @@
 		F293BC4615EB859D00256477 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1AC3622316D47C5C000847F2 /* background.mp3 */,
-				1AC3622416D47C5C000847F2 /* background.ogg */,
-				1AC3622516D47C5C000847F2 /* crop.png */,
-				1AC3622616D47C5C000847F2 /* dog.png */,
-				1AC3622716D47C5C000847F2 /* effect1.wav */,
-				1AC3622816D47C5C000847F2 /* farm.jpg */,
+				85D1D5F81B57EF7B00EBC318 /* AudioEngine.lua */,
+				85D1D5F91B57EF7B00EBC318 /* CCBReaderLoad.lua */,
+				85D1D5FA1B57EF7B00EBC318 /* Cocos2d.lua */,
+				85D1D5FB1B57EF7B00EBC318 /* CocoStudio.lua */,
+				85D1D5FC1B57EF7B00EBC318 /* extern.lua */,
+				85D1D5FD1B57EF7B00EBC318 /* functions.lua */,
+				85D1D5FE1B57EF7B00EBC318 /* json.lua */,
+				85D1D5F21B57EF6900EBC318 /* cocostudio */,
+				85D1D5F31B57EF6900EBC318 /* lua */,
+				85D1D5F41B57EF6900EBC318 /* poker */,
 				1AC3622916D47C5C000847F2 /* fonts */,
 				1AC3622A16D47C5C000847F2 /* hello.lua */,
-				1AC3622B16D47C5C000847F2 /* hello2.lua */,
-				1AC3622C16D47C5C000847F2 /* land.png */,
-				1AC3622D16D47C5C000847F2 /* menu1.png */,
-				1AC3622E16D47C5C000847F2 /* menu2.png */,
 				15C156911683138E00D239F2 /* Default-568h@2x.png */,
 				15C156921683138E00D239F2 /* Default.png */,
 				15C156931683138E00D239F2 /* Default@2x.png */,
@@ -2202,27 +2254,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D1D5F61B57EF6900EBC318 /* lua in Resources */,
 				15C156981683138E00D239F2 /* Default-568h@2x.png in Resources */,
 				15C156991683138E00D239F2 /* Default.png in Resources */,
 				15C1569A1683138E00D239F2 /* Default@2x.png in Resources */,
 				15C1569B1683138E00D239F2 /* Icon-57.png in Resources */,
 				15C1569C1683138E00D239F2 /* Icon-72.png in Resources */,
+				85D1D5F71B57EF6900EBC318 /* poker in Resources */,
 				15C1569D1683138E00D239F2 /* Icon-114.png in Resources */,
 				15C1569E1683138E00D239F2 /* Icon-144.png in Resources */,
-				1AC3622F16D47C5C000847F2 /* background.mp3 in Resources */,
-				1AC3623016D47C5C000847F2 /* background.ogg in Resources */,
-				1AC3623116D47C5C000847F2 /* crop.png in Resources */,
-				1AC3623216D47C5C000847F2 /* dog.png in Resources */,
-				1AC3623316D47C5C000847F2 /* effect1.wav in Resources */,
-				1AC3623416D47C5C000847F2 /* farm.jpg in Resources */,
+				85D1D6031B57EF7B00EBC318 /* extern.lua in Resources */,
+				85D1D6051B57EF7B00EBC318 /* json.lua in Resources */,
+				85D1D6041B57EF7B00EBC318 /* functions.lua in Resources */,
 				1AC3623516D47C5C000847F2 /* fonts in Resources */,
 				1AC3623616D47C5C000847F2 /* hello.lua in Resources */,
-				1AC3623716D47C5C000847F2 /* hello2.lua in Resources */,
-				1AC3623816D47C5C000847F2 /* land.png in Resources */,
-				1AC3623916D47C5C000847F2 /* menu1.png in Resources */,
-				1AC3623A16D47C5C000847F2 /* menu2.png in Resources */,
+				85D1D6011B57EF7B00EBC318 /* Cocos2d.lua in Resources */,
 				46C59AD317641FF300F43DC3 /* AudioEngine.lua in Resources */,
+				85D1D6001B57EF7B00EBC318 /* CCBReaderLoad.lua in Resources */,
+				85D1D6021B57EF7B00EBC318 /* CocoStudio.lua in Resources */,
+				85D1D5F51B57EF6900EBC318 /* cocostudio in Resources */,
 				46C59AD417641FF300F43DC3 /* CCBReaderLoad.lua in Resources */,
+				85D1D5FF1B57EF7B00EBC318 /* AudioEngine.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2262,6 +2314,7 @@
 				15C154041683112E00D239F2 /* CCLayerGradientLoader.cpp in Sources */,
 				15C154051683112E00D239F2 /* CCLayerLoader.cpp in Sources */,
 				15C154061683112E00D239F2 /* CCMenuItemImageLoader.cpp in Sources */,
+				85D1D6151B57F00500EBC318 /* fpconv.c in Sources */,
 				15C154071683112E00D239F2 /* CCMenuItemLoader.cpp in Sources */,
 				15C154081683112E00D239F2 /* CCNode+CCBRelativePositioning.cpp in Sources */,
 				15C154091683112E00D239F2 /* CCNodeLoader.cpp in Sources */,
@@ -2297,6 +2350,7 @@
 				298B2A3718D0671400C1920F /* PageViewReader.cpp in Sources */,
 				15C154211683112E00D239F2 /* CCTableView.cpp in Sources */,
 				15C154221683112E00D239F2 /* CCTableViewCell.cpp in Sources */,
+				85D1D61A1B57F00500EBC318 /* lua_helperClass.cpp in Sources */,
 				ED35C0CD18323498002A0750 /* CCBatchNode.cpp in Sources */,
 				15C154231683112E00D239F2 /* HttpClient.cpp in Sources */,
 				ED35C0D018323498002A0750 /* CCDisplayManager.cpp in Sources */,
@@ -2325,6 +2379,7 @@
 				15C154971683116B00D239F2 /* cpArray.c in Sources */,
 				15C154981683116B00D239F2 /* cpBB.c in Sources */,
 				ED35C0F118323498002A0750 /* UILabelBMFont.cpp in Sources */,
+				85D1D6161B57F00500EBC318 /* lua_cjson.c in Sources */,
 				2964942319518E9A00BE20D8 /* CCTimeLine.cpp in Sources */,
 				1583F16818D09FF900F3D630 /* UIPageView.cpp in Sources */,
 				2964942019518E9A00BE20D8 /* CCActionTimelineCache.cpp in Sources */,
@@ -2367,6 +2422,7 @@
 				15C155281683118600D239F2 /* b2CircleShape.cpp in Sources */,
 				15C155291683118600D239F2 /* b2EdgeShape.cpp in Sources */,
 				298B2A3618D0671400C1920F /* LoadingBarReader.cpp in Sources */,
+				85D1D6191B57F00500EBC318 /* struct.c in Sources */,
 				15C1552A1683118600D239F2 /* b2PolygonShape.cpp in Sources */,
 				15C1552B1683118600D239F2 /* b2BlockAllocator.cpp in Sources */,
 				15CA8CF618696744000032AB /* lua_cocos2dx_manual.cpp in Sources */,
@@ -2377,6 +2433,7 @@
 				15C1552F1683118600D239F2 /* b2StackAllocator.cpp in Sources */,
 				15C155301683118600D239F2 /* b2Timer.cpp in Sources */,
 				ED35C0FF18323498002A0750 /* GUIReader.cpp in Sources */,
+				85D1D6141B57F00500EBC318 /* CCTouchLayer.cpp in Sources */,
 				375BD562186846090024609E /* TriggerObj.cpp in Sources */,
 				15C155311683118600D239F2 /* b2Body.cpp in Sources */,
 				ED35C0ED18323498002A0750 /* UICheckBox.cpp in Sources */,
@@ -2409,6 +2466,7 @@
 				15C155431683118600D239F2 /* b2Joint.cpp in Sources */,
 				15C155441683118600D239F2 /* b2MouseJoint.cpp in Sources */,
 				ED35C0DC18323498002A0750 /* CCComController.cpp in Sources */,
+				85D1D6201B57F02600EBC318 /* CCMultiColumnTableView.cpp in Sources */,
 				15C155451683118600D239F2 /* b2PrismaticJoint.cpp in Sources */,
 				ED35C0EE18323498002A0750 /* UIImageView.cpp in Sources */,
 				15C155461683118600D239F2 /* b2PulleyJoint.cpp in Sources */,
@@ -2444,6 +2502,7 @@
 				1A40E7DF1727C47E006D4861 /* Animation.cpp in Sources */,
 				ED35C0E118323498002A0750 /* UILayout.cpp in Sources */,
 				ED35C10018323498002A0750 /* SceneReader.cpp in Sources */,
+				85D1D6171B57F00500EBC318 /* lua_extensions.c in Sources */,
 				ED35C0D118323498002A0750 /* CCSkin.cpp in Sources */,
 				1A40E7E01727C47E006D4861 /* AnimationState.cpp in Sources */,
 				1A40E7E11727C47E006D4861 /* AnimationStateData.cpp in Sources */,
@@ -2466,10 +2525,12 @@
 				1A40E7EC1727C47E006D4861 /* SkeletonData.cpp in Sources */,
 				1A40E7ED1727C47E006D4861 /* SkeletonJson.cpp in Sources */,
 				1A40E7EE1727C47E006D4861 /* Skin.cpp in Sources */,
+				85D1D6181B57F00500EBC318 /* strbuf.c in Sources */,
 				1A40E7EF1727C47E006D4861 /* Slot.cpp in Sources */,
 				ED35C0CB18323498002A0750 /* CCBone.cpp in Sources */,
 				1A40E7F01727C47E006D4861 /* SlotData.cpp in Sources */,
 				1A40E7F11727C47E006D4861 /* spine-cocos2dx.cpp in Sources */,
+				85D1D61D1B57F01B00EBC318 /* CCControlCheckBox.cpp in Sources */,
 				1AB87024175E0A2D005D39BF /* WebSocket.cpp in Sources */,
 				1AB87029175E0A40005D39BF /* CCSkeleton.cpp in Sources */,
 				1AB8702A175E0A40005D39BF /* CCSkeletonAnimation.cpp in Sources */,

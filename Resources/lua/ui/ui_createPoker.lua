@@ -233,6 +233,11 @@ local function onCellCreated( state, pSender )
 		--删除玩家按钮 deleteUser
 		local function deleteUserClicked()
 			print("删除玩家")
+			local sbStr = namesArray[user.sb]
+			table.insert(cloneNamesArray, sbStr)
+			table.sort( cloneNamesArray, function ( index1, index2 )
+				return namesIndex[index1] < namesIndex[index2]
+			end )
 			table.remove(pokerData.usersInfo, index)
 			local containerPos = all_node.scrollListLayer:getContentOffset()
 			all_node.scrollListLayer:initWithCellCount(#pokerData.usersInfo)

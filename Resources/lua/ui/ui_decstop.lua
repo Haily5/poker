@@ -76,15 +76,17 @@ local function updateNextAction()
 		actionName = tolua.cast(actionName, "CCLabelTTF")
 		actionName:setString(stepInfo.action or "ALL IN")
 
-		local jetton = stepInfo.jetton
+		local jetton = stepInfo.jetton --花费
 		local label = tableChouma[stepInfo.index]
 		label = tolua.cast(label, "CCLabelTTF")
+
 		cloneUserInfo[stepInfo.index] = cloneUserInfo[stepInfo.index] - jetton
+
 		local cloneJetton = cloneUserInfo[stepInfo.index]
 		if cloneJetton <= 0 then
 			actionName:setString("ALL IN")
 			local v = cloneJetton + jetton
-			if v > 0 then poolValue = poolValue + v end
+			if v > 0 then poolValue = poolValue + v - jetton end
 			cloneJetton = 0
 		else
 			poolValue = poolValue + jetton
@@ -100,6 +102,22 @@ local function updateNextAction()
 		if stepname then
 			print("下一步")
 			actionStep = 1
+			--回收动作
+			for __ ,label in pairs(jettonLabelArray) do
+				function resetLabel()
+					label:setString("0")
+				end
+				local moveTo = CCMoveTo:create(0.3, ccp(228, 335))
+				local m2 = CCMoveTo:create(0, ccp(label:getParent():getPositionX(), label:getParent():getPositionY()))
+				local call = CCCallFunc:create(resetLabel)
+				local array = CCArray:create()
+				array:addObject(moveTo)
+				array:addObject(m2)
+				array:addObject(call)
+				local action = CCSequence:create(array)
+				label:getParent():runAction(action)
+
+			end
 			updateNextAction()
 		else
 			stepname = "scroRiver"
@@ -130,7 +148,7 @@ local function updateBackAction()
 		if cloneJetton <= 0 then
 			actionName:setString("ALL IN")
 			local v = cloneJetton + jetton
-			if v > 0 then poolValue = poolValue - v end
+			if v > 0 then poolValue = poolValue - v + jetton end
 			cloneJetton = 0
 		else 
 			poolValue = poolValue - jetton
@@ -248,7 +266,11 @@ local function on_init(_layer, _data, startPoint, callback, _priority, _childen)
 
 		cloneUserInfo[index] = tonumber(jetton)
 
-		jetton = formatChouma(jetton)
+		if jetton < 0 then
+			jetton = "ALL IN"
+		else
+			jetton = formatChouma(jetton)
+		end
 
 		local label = CCLabelTTF:create(jetton, "verdana", 18)
 		all_node["player" .. index]:addChild(label)

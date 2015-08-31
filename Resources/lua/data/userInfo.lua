@@ -13,10 +13,11 @@ local userPokerList = {}
 
 --获取用户ID	
 function UserInfo:getUserId()
-	local userId = CCUserDefault:sharedUserDefault():getStringForKey("userId")
-	if string.len(userId) ~= 0 then
-		return userId
-	end
+	return "123456"
+	-- local userId = CCUserDefault:sharedUserDefault():getStringForKey("userId")
+	-- if string.len(userId) ~= 0 then
+	-- 	return userId
+	-- end
 end
 
 --设置用户ID

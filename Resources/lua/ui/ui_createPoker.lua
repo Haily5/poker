@@ -202,6 +202,7 @@ local function onCellCreated( state, pSender )
 		finishChoumaButton = tolua.cast(finishChoumaButton, "CCControlButton")
 		finishChoumaButton:setTouchPriority(priority)
 		finishChoumaButton:addHandleOfControlEvent(finishChoumaClicked, CCControlEventTouchUpInside)
+		finishChoumaButton:setVisible(false)
 
 		--sb文字 SBlabel
 		local SBlabel = childen.SBlabel

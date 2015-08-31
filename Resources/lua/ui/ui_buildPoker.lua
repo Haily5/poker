@@ -27,7 +27,6 @@ local costValue = 0
 local index1 = 1
 local index2 = 1
 local index3 = 1
-
 local index4 = 1
 
 local function getLastAction(index, group)
@@ -63,7 +62,9 @@ end
 
 local function getNoPassPlayer(group, index)
 
-
+	index = index - 1
+	index = index % #sbArray + 1
+	if index > #sbArray then index = index % #sbArray + 1 end
 	local sbIndex = getFirstPlayerIndex(index)
 
 	print(sbIndex .. "sbIndex")
@@ -81,6 +82,26 @@ local function getPlayerByIndex(index)
 		if playerInfo.sb == index then return playerInfo end
 	end
 end
+
+
+local function getNextAcionPlayer(group, start)
+
+	local value = nil
+
+	local function getNearOrEqual()
+		for ___, index in pairs(sbArray) do
+			if index == start then return index end
+			if index > start then return index end
+		end
+	end
+
+	local value = getNearOrEqual()
+	if not value then value = sbArray[1] end
+	print(value, "value")
+	return getPlayerByIndex(value)
+
+end
+
 
 
 
@@ -109,15 +130,15 @@ local function scroPerFlop_onCellCreated( state, pSender )
 				local stepInfo = {}
 				if #pokerData.steps.scroPerFlop == 0 then
 					--大盲操作
-					stepInfo["index"] = getFirstPlayerIndex()
+					stepInfo["index"] = getNextAcionPlayer("scroPerFlop",3).sb
 					stepInfo["action"] = "call"
 					stepInfo["jetton"] = pokerData.pokerInfo.level
 					costValue = pokerData.pokerInfo.level
-					index1 = stepInfo["index"]
+					index1 = stepInfo["index"] + 1
 				else
 					--其他操作
-					index1 = index1 + 1
-					local nextPlayer = getNoPassPlayer("scroPerFlop", index1)
+					
+					local nextPlayer = getNextAcionPlayer("scroPerFlop", index1)
 					if not nextPlayer then return end
 					
 					local jetton = costValue
@@ -125,6 +146,7 @@ local function scroPerFlop_onCellCreated( state, pSender )
 					stepInfo["jetton"] = jetton
 					stepInfo["index"] = nextPlayer.sb
 					stepInfo["action"] = "call"
+					index1 = stepInfo.index + 1
 					
 				end
 				
@@ -236,14 +258,15 @@ local function scroPerFlop_onCellCreated( state, pSender )
 			raise:setText(stepInfo.jetton)
 		end
 
-		checkfold:setEnabled(index1 == index)
-		checkcheck:setEnabled(index1 == index)
-		checkcall:setEnabled(index1 == index)
-		raise:setEnabled(index1 == index)
+		-- checkfold:setEnabled(index1 == index)
+		-- checkcheck:setEnabled(index1 == index)
+		-- checkcall:setEnabled(index1 == index)
+		-- raise:setEnabled(index1 == index)
 		local saveButton = childen.saveButton
 		saveButton = tolua.cast(saveButton, "CCControlButton")
 		saveButton:setTouchPriority(priority)
 		saveButton:addHandleOfControlEvent(saveButtonClicked, CCControlEventTouchUpInside)
+		saveButton:setVisible(false)
 		cell:addChild(cellLayer)
     end
 	local pCellbag = tolua.cast(pSender, "CCMultiColumnTableViewCell")
@@ -272,17 +295,25 @@ local function scroFlop_onCellCreated( state, pSender )
 			button:setTouchPriority(priority)
 			local function addButtonClicked()
 				--获取最后一个人的操作
-				stepInfo = {}
-				dump(pokerData.steps, "pokerData.steps")
-				local nextPlayer = getNoPassPlayer("scroFlop" , index2)
-				if not nextPlayer then return end
-
-				stepInfo["jetton"] = costValue
-				stepInfo["index"] = nextPlayer.sb
-				stepInfo["action"] = "call"
-
-				index2 = index2 + 1
-
+				local stepInfo = {}
+				if #pokerData.steps.scroFlop == 0 then
+					--大盲操作
+					stepInfo["index"] = getNextAcionPlayer("scroFlop",1).sb
+					stepInfo["action"] = "call"
+					stepInfo["jetton"] = pokerData.pokerInfo.level
+					costValue = pokerData.pokerInfo.level
+					
+				else
+					--其他操作
+					
+					local nextPlayer = getNextAcionPlayer("scroFlop", index2)
+					if not nextPlayer then return end
+					local jetton = costValue
+					stepInfo["jetton"] = jetton
+					stepInfo["index"] = nextPlayer.sb
+					stepInfo["action"] = "call"					
+				end
+				index2 = stepInfo["index"] + 1
 				table.insert(pokerData.steps.scroFlop, stepInfo)
 
 				local count = #pokerData.steps.scroFlop
@@ -389,14 +420,15 @@ local function scroFlop_onCellCreated( state, pSender )
 			raise:setText(stepInfo.jetton)
 		end
 
-		checkfold:setEnabled(index2 == index )
-		checkcheck:setEnabled(index2 == index)
-		checkcall:setEnabled(index2 == index)
-		raise:setEnabled(index2 == index)
+		-- checkfold:setEnabled(index2 == index )
+		-- checkcheck:setEnabled(index2 == index)
+		-- checkcall:setEnabled(index2 == index)
+		-- raise:setEnabled(index2 == index)
 		local saveButton = childen.saveButton
 		saveButton = tolua.cast(saveButton, "CCControlButton")
 		saveButton:setTouchPriority(priority)
 		saveButton:addHandleOfControlEvent(saveButtonClicked, CCControlEventTouchUpInside)
+		saveButton:setVisible(false)
 		cell:addChild(cellLayer)
     end
 	local pCellbag = tolua.cast(pSender, "CCMultiColumnTableViewCell")
@@ -426,12 +458,24 @@ local function scrolTurn_onCellCreated( state, pSender )
 			local function addButtonClicked()
 				--获取最后一个人的操作
 				local stepInfo = {}
-				local nextPlayer = getNoPassPlayer("scrolTurn" ,index3)
-				if not nextPlayer then return end
-				stepInfo["jetton"] = costValue
-				stepInfo["index"] = nextPlayer.sb
-				stepInfo["action"] = "call"
-				index3 = index3 + 1
+				if #pokerData.steps.scrolTurn == 0 then
+					--大盲操作
+					stepInfo["index"] = getNextAcionPlayer("scrolTurn",1).sb
+					stepInfo["action"] = "call"
+					stepInfo["jetton"] = pokerData.pokerInfo.level
+					costValue = pokerData.pokerInfo.level
+					
+				else
+					--其他操作
+					
+					local nextPlayer = getNextAcionPlayer("scrolTurn", index3)
+					if not nextPlayer then return end
+					local jetton = costValue
+					stepInfo["jetton"] = jetton
+					stepInfo["index"] = nextPlayer.sb
+					stepInfo["action"] = "call"					
+				end
+				index3 = stepInfo["index"] + 1
 
 				table.insert(pokerData.steps.scrolTurn, stepInfo)
 
@@ -535,14 +579,15 @@ local function scrolTurn_onCellCreated( state, pSender )
 			raise:setText(stepInfo.jetton)
 		end
 
-		checkfold:setEnabled(index3 == index)
-		checkcheck:setEnabled(index3 == index)
-		checkcall:setEnabled(index3 == index)
-		raise:setEnabled(index3 == index)
+		-- checkfold:setEnabled(index3 == index)
+		-- checkcheck:setEnabled(index3 == index)
+		-- checkcall:setEnabled(index3 == index)
+		-- raise:setEnabled(index3 == index)
 		local saveButton = childen.saveButton
 		saveButton = tolua.cast(saveButton, "CCControlButton")
 		saveButton:setTouchPriority(priority)
 		saveButton:addHandleOfControlEvent(saveButtonClicked, CCControlEventTouchUpInside)
+		saveButton:setVisible(false)
 		cell:addChild(cellLayer)
     end
 	local pCellbag = tolua.cast(pSender, "CCMultiColumnTableViewCell")
@@ -572,14 +617,24 @@ local function scroRiver_onCellCreated( state, pSender )
 			local function addButtonClicked()
 				--获取最后一个人的操作
 				local stepInfo = {}
-				local nextPlayer = getNoPassPlayer("scroPerFlop", index4)
-				if not nextPlayer then return end
-
-				stepInfo["jetton"] = costValue
-				stepInfo["index"] = nextPlayer.sb
-				stepInfo["action"] = "call"
-				index4 = index4 + 1
-
+				if #pokerData.steps.scroRiver == 0 then
+					--大盲操作
+					stepInfo["index"] = getNextAcionPlayer("scroRiver",1).sb
+					stepInfo["action"] = "call"
+					stepInfo["jetton"] = pokerData.pokerInfo.level
+					costValue = pokerData.pokerInfo.level
+					
+				else
+					--其他操作
+					
+					local nextPlayer = getNextAcionPlayer("scroRiver", index4)
+					if not nextPlayer then return end
+					local jetton = costValue
+					stepInfo["jetton"] = jetton
+					stepInfo["index"] = nextPlayer.sb
+					stepInfo["action"] = "call"					
+				end
+				index4 = stepInfo["index"] + 1
 				table.insert(pokerData.steps.scroRiver, stepInfo)
 
 				local count = #pokerData.steps.scroRiver + 1
@@ -682,14 +737,15 @@ local function scroRiver_onCellCreated( state, pSender )
 			raise:setText(stepInfo.jetton)
 		end
 
-		checkfold:setEnabled(index4 == index)
-		checkcheck:setEnabled(index4 == index)
-		checkcall:setEnabled(index4 == index)
-		raise:setEnabled(index4 == index)
+		-- checkfold:setEnabled(index4 == index)
+		-- checkcheck:setEnabled(index4 == index)
+		-- checkcall:setEnabled(index4 == index)
+		-- raise:setEnabled(index4 == index)
 		local saveButton = childen.saveButton
 		saveButton = tolua.cast(saveButton, "CCControlButton")
 		saveButton:setTouchPriority(priority)
 		saveButton:addHandleOfControlEvent(saveButtonClicked, CCControlEventTouchUpInside)
+		saveButton:setVisible(false)
 		cell:addChild(cellLayer)
     end
 	local pCellbag = tolua.cast(pSender, "CCMultiColumnTableViewCell")
@@ -709,6 +765,11 @@ local function on_init(_layer, _data1, _data2, _data3, _priority, _childen)
 	for ___, playerInfo in pairs(pokerData.usersInfo) do
 		table.insert(sbArray, playerInfo.sb)
 	end
+
+	table.sort( sbArray , function (x, y)
+		return x < y
+	end )
+	dump(sbArray, "sbArray")
 	--[[
 		scroPerFlop
 		scroFlop

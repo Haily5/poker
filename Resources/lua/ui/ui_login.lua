@@ -33,7 +33,7 @@ local button_clicked_list = {
 	end,
 	hotClicked = function ()
 		print("热门牌谱")
-		G_UI_Manger.G_Func_showUI("pokerList", 1)
+		-- G_UI_Manger.G_Func_showUI("pokerList", 1)
 	end,
 	myClicked = function ()
 		print("我的牌谱")

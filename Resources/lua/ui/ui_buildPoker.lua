@@ -47,23 +47,33 @@ end
 
 local sbArray = {}
 
+local function getFirstPlayerIndex(start)
+	start = start or 3
+	print (start .. "start")
+	for i=0,8 do
+		local playerIndex = i + start
+		if playerIndex > 9 then playerIndex = playerIndex - 9 end
+
+		for ___,playerInfo in pairs(pokerData.usersInfo) do
+			if playerInfo.sb == playerIndex then return playerIndex end
+		end
+
+	end
+end
+
 local function getNoPassPlayer(group, index)
 
-	local sbIndex
-	dump(sbArray, "sbArray")
+
+	local sbIndex = getFirstPlayerIndex(index)
+
+	print(sbIndex .. "sbIndex")
+	dump(pokerData.usersInfo, "usersInfo")
+
+	
 	for i,v in ipairs(sbArray) do
-		if v == index then
-			sbIndex = i
-		end
+		if v == sbIndex then return pokerData.usersInfo[i] end
 	end
 
-	for i= 1, #sbArray do
-		local idx = sbIndex + i
-		if idx > #sbArray then idx = idx - #sbArray end
-		local player = pokerData.usersInfo[idx]
-		local lastAction = getLastAction(player.sb, group)
-		if lastAction ~= "fold" then return player end
-	end
 end
 
 local function getPlayerByIndex(index)
@@ -71,6 +81,8 @@ local function getPlayerByIndex(index)
 		if playerInfo.sb == index then return playerInfo end
 	end
 end
+
+
 
 local function scroPerFlop_onCellCreated( state, pSender )
 	local scrollView = tolua.cast(pSender, "")
@@ -97,23 +109,23 @@ local function scroPerFlop_onCellCreated( state, pSender )
 				local stepInfo = {}
 				if #pokerData.steps.scroPerFlop == 0 then
 					--大盲操作
-					stepInfo["index"] = 3
+					stepInfo["index"] = getFirstPlayerIndex()
 					stepInfo["action"] = "call"
-					stepInfo["jetton"] = 0
-					costValue = 0
+					stepInfo["jetton"] = pokerData.pokerInfo.level
+					costValue = pokerData.pokerInfo.level
+					index1 = stepInfo["index"]
 				else
 					--其他操作
-					local lastStepInfo = pokerData.steps.scroPerFlop[#pokerData.steps.scroPerFlop]
-					local nextPlayer = getNoPassPlayer("scroPerFlop", lastStepInfo.index)
-					if not nextPlayer or nextPlayer.sb == lastStepInfo.index then return end
+					index1 = index1 + 1
+					local nextPlayer = getNoPassPlayer("scroPerFlop", index1)
+					if not nextPlayer then return end
 					
 					local jetton = costValue
 
 					stepInfo["jetton"] = jetton
 					stepInfo["index"] = nextPlayer.sb
 					stepInfo["action"] = "call"
-
-					index1 = index1 + 1
+					
 				end
 				
 				table.insert(pokerData.steps.scroPerFlop, stepInfo)
@@ -261,26 +273,15 @@ local function scroFlop_onCellCreated( state, pSender )
 			local function addButtonClicked()
 				--获取最后一个人的操作
 				stepInfo = {}
-				if #pokerData.steps.scroFlop == 0 then
-					local nextPlayer = getNoPassPlayer("scroFlop", 1)
-					if not nextPlayer then return end
-					stepInfo["index"] = nextPlayer.sb
-					stepInfo["action"] = "call"
-					stepInfo["jetton"] = 0
-					costValue = 0
-					
-				else
-					--其他操作
-					local lastStepInfo = pokerData.steps.scroFlop[#pokerData.steps.scroFlop]
-					local nextPlayer = getNoPassPlayer("scroFlop" ,lastStepInfo.index)
-					if not nextPlayer or nextPlayer.sb == lastStepInfo.index then return end
+				dump(pokerData.steps, "pokerData.steps")
+				local nextPlayer = getNoPassPlayer("scroFlop" , index2)
+				if not nextPlayer then return end
 
-					stepInfo["jetton"] = costValue
-					stepInfo["index"] = nextPlayer.sb
-					stepInfo["action"] = "call"
+				stepInfo["jetton"] = costValue
+				stepInfo["index"] = nextPlayer.sb
+				stepInfo["action"] = "call"
 
-					index2 = index2 + 1
-				end
+				index2 = index2 + 1
 
 				table.insert(pokerData.steps.scroFlop, stepInfo)
 
@@ -425,26 +426,12 @@ local function scrolTurn_onCellCreated( state, pSender )
 			local function addButtonClicked()
 				--获取最后一个人的操作
 				local stepInfo = {}
-				if #pokerData.steps.scrolTurn == 0 then
-					--大盲操作
-
-					local nextPlayer = getNoPassPlayer("scrolTurn" , 1)
-					if not nextPlayer then return end
-
-					stepInfo["action"] = "call"
-					stepInfo["jetton"] = 0
-					stepInfo["index"] = nextPlayer.sb
-					costValue = 0
-				else
-					--其他操作
-					local lastStepInfo = pokerData.steps.scrolTurn[#pokerData.steps.scrolTurn]
-					local nextPlayer = getNoPassPlayer("scrolTurn" ,lastStepInfo.index)
-					if not nextPlayer or nextPlayer.sb == lastStepInfo.index then return end
-					stepInfo["jetton"] = costValue
-					stepInfo["index"] = nextPlayer.sb
-					stepInfo["action"] = "call"
-					index3 = index3 + 1
-				end
+				local nextPlayer = getNoPassPlayer("scrolTurn" ,index3)
+				if not nextPlayer then return end
+				stepInfo["jetton"] = costValue
+				stepInfo["index"] = nextPlayer.sb
+				stepInfo["action"] = "call"
+				index3 = index3 + 1
 
 				table.insert(pokerData.steps.scrolTurn, stepInfo)
 
@@ -585,26 +572,13 @@ local function scroRiver_onCellCreated( state, pSender )
 			local function addButtonClicked()
 				--获取最后一个人的操作
 				local stepInfo = {}
-				if #pokerData.steps.scroRiver == 0 then
-					--大盲操作
-					local nextPlayer = getNoPassPlayer("scroRiver" , 1)
-					if not nextPlayer then return end
+				local nextPlayer = getNoPassPlayer("scroPerFlop", index4)
+				if not nextPlayer then return end
 
-					stepInfo["index"] = nextPlayer.sb
-					stepInfo["action"] = "call"
-					stepInfo["jetton"] = 0
-					costValue = 0
-				else
-					--其他操作
-					local lastStepInfo = pokerData.steps.scroRiver[#pokerData.steps.scroRiver]
-					local nextPlayer = getNoPassPlayer("scroPerFlop", lastStepInfo.index)
-					if not nextPlayer or nextPlayer.sb == lastStepInfo.index then return end
-
-					stepInfo["jetton"] = costValue
-					stepInfo["index"] = nextPlayer.sb
-					stepInfo["action"] = "call"
-					index4 = index4 + 1
-				end
+				stepInfo["jetton"] = costValue
+				stepInfo["index"] = nextPlayer.sb
+				stepInfo["action"] = "call"
+				index4 = index4 + 1
 
 				table.insert(pokerData.steps.scroRiver, stepInfo)
 

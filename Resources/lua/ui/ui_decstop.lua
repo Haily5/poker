@@ -248,7 +248,7 @@ local function on_init(_layer, _data, startPoint, callback, _priority, _childen)
 
 		jettonLabelArray[index] = costLabel
 
-		local jetton = info.jetton
+		local jetton = tonumber(info.jetton)
 		if index == namesIndex["BB"] then
 
 			costLabel:setString(formatChouma(data.pokerInfo.level))

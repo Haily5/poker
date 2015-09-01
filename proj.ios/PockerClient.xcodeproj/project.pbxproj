@@ -149,9 +149,7 @@
 		15C156981683138E00D239F2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15C156911683138E00D239F2 /* Default-568h@2x.png */; };
 		15C156991683138E00D239F2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 15C156921683138E00D239F2 /* Default.png */; };
 		15C1569A1683138E00D239F2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15C156931683138E00D239F2 /* Default@2x.png */; };
-		15C1569B1683138E00D239F2 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 15C156941683138E00D239F2 /* Icon-57.png */; };
 		15C1569C1683138E00D239F2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 15C156951683138E00D239F2 /* Icon-72.png */; };
-		15C1569D1683138E00D239F2 /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 15C156961683138E00D239F2 /* Icon-114.png */; };
 		15C1569E1683138E00D239F2 /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 15C156971683138E00D239F2 /* Icon-144.png */; };
 		15CA8CF518696744000032AB /* lua_cocos2dx_cocostudio_manual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15CA8CEF18696743000032AB /* lua_cocos2dx_cocostudio_manual.cpp */; };
 		15CA8CF618696744000032AB /* lua_cocos2dx_manual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15CA8CF118696743000032AB /* lua_cocos2dx_manual.cpp */; };
@@ -243,6 +241,16 @@
 		85D1D61A1B57F00500EBC318 /* lua_helperClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D6121B57F00500EBC318 /* lua_helperClass.cpp */; };
 		85D1D61D1B57F01B00EBC318 /* CCControlCheckBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D61B1B57F01B00EBC318 /* CCControlCheckBox.cpp */; };
 		85D1D6201B57F02600EBC318 /* CCMultiColumnTableView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85D1D61E1B57F02600EBC318 /* CCMultiColumnTableView.cpp */; };
+		85D228081B954FBC0025F839 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D227FF1B954FBC0025F839 /* Default-667h@2x.png */; };
+		85D228091B954FBC0025F839 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D228001B954FBC0025F839 /* Default-736h@3x.png */; };
+		85D2280A1B954FBC0025F839 /* icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D228011B954FBC0025F839 /* icon-29.png */; };
+		85D2280B1B954FBC0025F839 /* icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D228021B954FBC0025F839 /* icon-50.png */; };
+		85D2280C1B954FBC0025F839 /* icon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D228031B954FBC0025F839 /* icon-58.png */; };
+		85D2280D1B954FBC0025F839 /* icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D228041B954FBC0025F839 /* icon-100.png */; };
+		85D2280E1B954FBC0025F839 /* icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D228051B954FBC0025F839 /* icon-512.png */; };
+		85D2280F1B954FBC0025F839 /* icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D228061B954FBC0025F839 /* icon-1024.png */; };
+		85D228161B95503E0025F839 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D228151B95503E0025F839 /* Images.xcassets */; };
+		85D228181B957C2A0025F839 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85D228171B957C2A0025F839 /* Info.plist */; };
 		ED35C0C718323498002A0750 /* CCArmatureAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED35C03818323497002A0750 /* CCArmatureAnimation.cpp */; };
 		ED35C0C818323498002A0750 /* CCProcessBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED35C03A18323497002A0750 /* CCProcessBase.cpp */; };
 		ED35C0C918323498002A0750 /* CCTween.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED35C03C18323497002A0750 /* CCTween.cpp */; };
@@ -606,9 +614,7 @@
 		15C156911683138E00D239F2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
 		15C156921683138E00D239F2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 		15C156931683138E00D239F2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = SOURCE_ROOT; };
-		15C156941683138E00D239F2 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = SOURCE_ROOT; };
 		15C156951683138E00D239F2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = SOURCE_ROOT; };
-		15C156961683138E00D239F2 /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = SOURCE_ROOT; };
 		15C156971683138E00D239F2 /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-144.png"; sourceTree = SOURCE_ROOT; };
 		15CA8CEF18696743000032AB /* lua_cocos2dx_cocostudio_manual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_cocostudio_manual.cpp; sourceTree = "<group>"; };
 		15CA8CF018696743000032AB /* lua_cocos2dx_cocostudio_manual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_cocos2dx_cocostudio_manual.h; sourceTree = "<group>"; };
@@ -793,6 +799,16 @@
 		85D1D61C1B57F01B00EBC318 /* CCControlCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCControlCheckBox.h; sourceTree = "<group>"; };
 		85D1D61E1B57F02600EBC318 /* CCMultiColumnTableView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCMultiColumnTableView.cpp; sourceTree = "<group>"; };
 		85D1D61F1B57F02600EBC318 /* CCMultiColumnTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMultiColumnTableView.h; sourceTree = "<group>"; };
+		85D227FF1B954FBC0025F839 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = SOURCE_ROOT; };
+		85D228001B954FBC0025F839 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = SOURCE_ROOT; };
+		85D228011B954FBC0025F839 /* icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29.png"; sourceTree = SOURCE_ROOT; };
+		85D228021B954FBC0025F839 /* icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-50.png"; sourceTree = SOURCE_ROOT; };
+		85D228031B954FBC0025F839 /* icon-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-58.png"; sourceTree = SOURCE_ROOT; };
+		85D228041B954FBC0025F839 /* icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-100.png"; sourceTree = SOURCE_ROOT; };
+		85D228051B954FBC0025F839 /* icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-512.png"; sourceTree = SOURCE_ROOT; };
+		85D228061B954FBC0025F839 /* icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-1024.png"; sourceTree = SOURCE_ROOT; };
+		85D228151B95503E0025F839 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PockerClient/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		85D228171B957C2A0025F839 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED35C03818323497002A0750 /* CCArmatureAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCArmatureAnimation.cpp; sourceTree = "<group>"; };
 		ED35C03918323497002A0750 /* CCArmatureAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCArmatureAnimation.h; sourceTree = "<group>"; };
 		ED35C03A18323497002A0750 /* CCProcessBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCProcessBase.cpp; sourceTree = "<group>"; };
@@ -2094,6 +2110,7 @@
 		F293B3BD15EB7BE500256477 = {
 			isa = PBXGroup;
 			children = (
+				85D228171B957C2A0025F839 /* Info.plist */,
 				15C1533E168310C700D239F2 /* cocos2dx.xcodeproj */,
 				15C154A71683118600D239F2 /* Box2D */,
 				15C1542E1683116B00D239F2 /* chipmunk */,
@@ -2163,6 +2180,15 @@
 		F293BC4615EB859D00256477 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				85D228151B95503E0025F839 /* Images.xcassets */,
+				85D227FF1B954FBC0025F839 /* Default-667h@2x.png */,
+				85D228001B954FBC0025F839 /* Default-736h@3x.png */,
+				85D228011B954FBC0025F839 /* icon-29.png */,
+				85D228021B954FBC0025F839 /* icon-50.png */,
+				85D228031B954FBC0025F839 /* icon-58.png */,
+				85D228041B954FBC0025F839 /* icon-100.png */,
+				85D228051B954FBC0025F839 /* icon-512.png */,
+				85D228061B954FBC0025F839 /* icon-1024.png */,
 				85D1D5F81B57EF7B00EBC318 /* AudioEngine.lua */,
 				85D1D5F91B57EF7B00EBC318 /* CCBReaderLoad.lua */,
 				85D1D5FA1B57EF7B00EBC318 /* Cocos2d.lua */,
@@ -2178,9 +2204,7 @@
 				15C156911683138E00D239F2 /* Default-568h@2x.png */,
 				15C156921683138E00D239F2 /* Default.png */,
 				15C156931683138E00D239F2 /* Default@2x.png */,
-				15C156941683138E00D239F2 /* Icon-57.png */,
 				15C156951683138E00D239F2 /* Icon-72.png */,
-				15C156961683138E00D239F2 /* Icon-114.png */,
 				15C156971683138E00D239F2 /* Icon-144.png */,
 			);
 			name = Resources;
@@ -2263,23 +2287,31 @@
 				15C156981683138E00D239F2 /* Default-568h@2x.png in Resources */,
 				15C156991683138E00D239F2 /* Default.png in Resources */,
 				15C1569A1683138E00D239F2 /* Default@2x.png in Resources */,
-				15C1569B1683138E00D239F2 /* Icon-57.png in Resources */,
 				15C1569C1683138E00D239F2 /* Icon-72.png in Resources */,
 				85D1D5F71B57EF6900EBC318 /* poker in Resources */,
-				15C1569D1683138E00D239F2 /* Icon-114.png in Resources */,
 				15C1569E1683138E00D239F2 /* Icon-144.png in Resources */,
+				85D2280A1B954FBC0025F839 /* icon-29.png in Resources */,
 				85D1D6031B57EF7B00EBC318 /* extern.lua in Resources */,
 				85D1D6051B57EF7B00EBC318 /* json.lua in Resources */,
+				85D2280B1B954FBC0025F839 /* icon-50.png in Resources */,
+				85D228081B954FBC0025F839 /* Default-667h@2x.png in Resources */,
 				85D1D6041B57EF7B00EBC318 /* functions.lua in Resources */,
 				1AC3623516D47C5C000847F2 /* fonts in Resources */,
+				85D2280D1B954FBC0025F839 /* icon-100.png in Resources */,
 				1AC3623616D47C5C000847F2 /* hello.lua in Resources */,
+				85D228181B957C2A0025F839 /* Info.plist in Resources */,
 				85D1D6011B57EF7B00EBC318 /* Cocos2d.lua in Resources */,
 				46C59AD317641FF300F43DC3 /* AudioEngine.lua in Resources */,
+				85D2280C1B954FBC0025F839 /* icon-58.png in Resources */,
 				85D1D6001B57EF7B00EBC318 /* CCBReaderLoad.lua in Resources */,
 				85D1D6021B57EF7B00EBC318 /* CocoStudio.lua in Resources */,
+				85D2280F1B954FBC0025F839 /* icon-1024.png in Resources */,
 				85D1D5F51B57EF6900EBC318 /* cocostudio in Resources */,
 				46C59AD417641FF300F43DC3 /* CCBReaderLoad.lua in Resources */,
+				85D2280E1B954FBC0025F839 /* icon-512.png in Resources */,
+				85D228161B95503E0025F839 /* Images.xcassets in Resources */,
 				85D1D5FF1B57EF7B00EBC318 /* AudioEngine.lua in Resources */,
+				85D228091B954FBC0025F839 /* Default-736h@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2634,8 +2666,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jinghe Jiang (BW569HAV8D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jinghe Jiang (BW569HAV8D)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jinghe Jiang (WQA6ZQHKCA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jinghe Jiang (WQA6ZQHKCA)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2680,7 +2714,7 @@
 					"-llua",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "06fa52cc-86e4-4f57-af64-06d96ae64fc9";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2691,8 +2725,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jinghe Jiang (BW569HAV8D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jinghe Jiang (BW569HAV8D)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jinghe Jiang (WQA6ZQHKCA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jinghe Jiang (WQA6ZQHKCA)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
@@ -2735,7 +2771,7 @@
 					"-llua",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "06fa52cc-86e4-4f57-af64-06d96ae64fc9";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
